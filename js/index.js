@@ -8,8 +8,8 @@ $(function () {
     let sc = $(window).scrollTop();
     // console.log(sc);
     if ((visual <= sc) & (sc >= profile)) {
-      $("#con1 .id_pic li:nth-child(1)").addClass("on");
-      $("#con1 .id_pic li:nth-child(3)").addClass("on");
+      $("#con1 .id_pic li:nth-child(1) p").addClass("on");
+      $("#con1 .id_pic li:nth-child(3) p").addClass("on");
     } else if (sc >= key) {
       $("#con2 .left").addClass("on");
       $("#con2 .right ul").addClass("on");

@@ -7,7 +7,7 @@ $(function () {
         $(".title h2:first-child").appendTo(".title");
         $(".title").stop().css({ "margin-top": "0px" });
       });
-  }, 2000);
+  }, 3000);
 
   //프로필
   //   let baseline = -300;
@@ -21,11 +21,22 @@ $(function () {
     if ((visual <= sc) & (sc >= profile)) {
       $("#con1 .id_pic li:nth-child(1) p").addClass("on");
       $("#con1 .id_pic li:nth-child(3) p").addClass("on");
-      $("  #con1 .id_txt li h3").addClass("on");
-      $("  #con1 .id_txt li img").addClass("on");
+      $("#con1 .id_txt li h3").addClass("on");
+      $(
+        "#con1 .id_txt li:nth-child(1) p, #con1 .id_txt li:nth-child(3) p"
+      ).each(function (index) {
+        $(this)
+          .delay(index * 300)
+          .queue(function (next) {
+            $(this).addClass("on");
+            next();
+          });
+      });
+      $("#con1 .id_txt li img").addClass("on");
     } else if (sc >= key) {
-      $("#con2 .left").addClass("on");
-      $("#con2 .right ul").addClass("on");
     }
   });
 });
+
+//  $("#con2 .left").addClass("on");
+// $("#con2 .right ul").addClass("on");

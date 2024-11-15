@@ -168,6 +168,13 @@
     padding: 0px 50px;
     box-sizing: border-box;
   }
+
+  #con1 .id_txt li:nth-child(3) p {
+    display: flex;
+    gap: 8px;
+    padding: 0px 10px;
+    box-sizing: border-box;
+  }
   #con1 .id_txt .edu {
     transition: 0.4s;
   }

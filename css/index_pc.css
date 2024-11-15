@@ -67,6 +67,7 @@
     height: 50px;
     line-height: 50px;
     text-align: center;
+    letter-spacing: 5px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -219,6 +220,10 @@
     justify-content: center;
     gap: 10px;
   }
+  #con1 .id_txt li:nth-child(3) p {
+    display: flex;
+    gap: 20px;
+  }
   #con1 .id_txt li h3 {
     height: 30px;
     line-height: 30px;
@@ -246,9 +251,13 @@
     transition: 1.2s;
   }
 
-  #con1 .id_txt li p {
+  #con1 .id_txt li:nth-child(1) p,
+  #con1 .id_txt li:nth-child(3) p {
     font-family: "NanumSquareRound";
     line-height: 35px;
+    opacity: 0; /* 초기 상태는 숨김 */
+    transform: translateY(20px); /* Y축으로 약간 이동 */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* 애니메이션 추가 */
   }
 
   #con1 .id_txt img {
@@ -263,13 +272,13 @@
     transition: 0.3s;
   }
   #con1 .id_txt img:nth-child(2) {
-    transition: 0.4s;
+    transition: 0.8s;
   }
   #con1 .id_txt img:nth-child(3) {
-    transition: 0.6s;
+    transition: 1.2s;
   }
   #con1 .id_txt img:nth-child(4) {
-    transition: 0.8s;
+    transition: 1.5s;
   }
   #con1 .id_txt img:nth-child(5) {
     transition: 1s;
@@ -291,6 +300,11 @@
   #con1 .id_txt img.on {
     opacity: 1;
     transform: translateY(0);
+  }
+  #con1 .id_txt li:nth-child(1) p,
+  #con1 .id_txt li:nth-child(3) p.on {
+    opacity: 1; /* 보여짐 */
+    transform: translateY(0); /* 이동 위치로 돌아옴 */
   }
   /* con2 키워드 */
   #con2 {
@@ -324,6 +338,7 @@
     width: 50rem;
   }
   #con2 .right img {
+    display: block;
     width: 3.3rem;
   }
 
@@ -332,6 +347,7 @@
     display: flex;
     gap: 20px;
     align-items: center;
+
     margin: 10px 0px;
     /* transform: translateY(1000px); */
   }
@@ -352,11 +368,6 @@
   #con2 .right ul li {
     background-color: red;
   }
-
-  /* #con2 .right on class  */
-  #con2 .right ul.on {
-    transform: translateY(0px);
-  }
   #con2 .right ul li:first-child {
     width: 7.8rem;
     font-size: 18px;
@@ -370,6 +381,12 @@
     color: #fff;
     text-align: center;
   }
+
+  /* #con2 .right on class  */
+
+  /* #con2 .right ul.on {
+    transform: translateY(0px);
+  } */
 
   /* con3 일러스트 작업물*/
   #con3 {

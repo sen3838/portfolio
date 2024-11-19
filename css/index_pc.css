@@ -31,7 +31,7 @@
     height: 100vh;
     position: relative;
     /* background-image: url(../img/forest_top.jpg); */
-    background-image: url(../img/visual2.jpg);
+    background-image: url(../img/visual22.jpg);
     /* background-image: url(../img/forest3.jpg); */
     /* background-repeat: no-repeat;
   background-size: 100%;
@@ -1094,7 +1094,7 @@ bottom: 30px; */
     justify-content: center;
     gap: 10px;
     align-items: center;
-    margin: 450px auto 0px;
+    margin: 490px auto 0px;
     -webkit-animation: bounce-in-top 1s both;
     animation: bounce-in-top 1s both;
   }

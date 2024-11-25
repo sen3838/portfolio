@@ -2791,6 +2791,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    z-index: 25;
   }
 
   #visual h2 span {
@@ -2798,8 +2799,9 @@
     font-size: 40px;
     color: #333;
     position: relative;
+    z-index: 10;
     top: 20px;
-    z-index: 20;
+    z-index: 25;
     display: inline-block;
     -webkit-font-smoothing: antialiased;
     animation: textbounce 0.3s ease infinite alternate;
@@ -2978,6 +2980,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
   }
 
   #visual .eye {
@@ -3015,7 +3018,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 20;
+    z-index: 12;
     animation: movePupils 5s infinite ease-in-out,
       smileEyes 5s infinite ease-in-out;
   }
@@ -3382,8 +3385,10 @@
     width: 100%;
     font-size: 1.3rem;
     transition: 0.3s;
+    margin-top: 15px;
   }
   #con3 .tit li:last-child {
+    font-size: 14px;
     width: 100%;
     transition: 0.8s;
   }

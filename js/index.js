@@ -12,14 +12,15 @@ $(function () {
     $(this).toggleClass("on");
     $(this).siblings(".contact_box").toggleClass("on");
   });
+
   let visual = $("#visual").height();
   let visual0 = $("#visual").offset().top;
   let profile = $("#con1").offset().top - 150;
   let key = $("#con2").offset().top - 350;
-  let con3 = $("#con3").offset().top - 200;
+  let con3 = $("#con3").offset().top;
   let con4 = $("#con4").offset().top;
   let con6 = $("#con6").offset().top - 350;
-  let con7 = $("#con7").offset().top - 200;
+  let con7 = $("#con7").offset().top + 650;
   // console.log(con4);
 
   $(window).on("scroll", function () {
@@ -115,6 +116,7 @@ $(function () {
     }
 
     if (sc >= con7) {
+      $("#con7 h2").addClass("on");
       $("#con7 ul li:nth-child(1)").addClass("on");
       $("#con7 ul li:nth-child(3)").addClass("on");
     }

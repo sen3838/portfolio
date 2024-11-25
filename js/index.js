@@ -30,7 +30,15 @@ $(function () {
       $("header").removeClass("on");
     }
     if (sc >= visual && profile <= sc) {
+      $("#con1 h2").addClass("con1_h2_slide");
+
       $("#con1 .id_pic li:nth-child(1) p").addClass("on");
+      $("  #con1 .id_pic li:nth-child(2) img").addClass("on");
+      document
+        .querySelector("#con1 .id_pic li:nth-child(2)")
+        .classList.add("on");
+      $("  #con1 .id_pic li:nth-child(2) p").addClass("on");
+
       $("#con1 .id_pic li:nth-child(3) p").addClass("on");
       $("#con1 .id_txt li h3").addClass("on");
       $(
@@ -68,6 +76,7 @@ $(function () {
     }
 
     if (sc > con3) {
+      $("#con3 h2").addClass("con3_h2_slide");
       $("#con3 .tit li").addClass("on");
       $("#con3 .con3_wrap h3").addClass("on");
       $("#con3 .value .circle").addClass("on");
@@ -93,11 +102,13 @@ $(function () {
     }
 
     if (sc > con4) {
+      $("#con4 h2").addClass("con4_h2_slide");
       $("#con4 .txt_wrap").addClass("on");
       $("#con4 .mock_wrap").addClass("on");
     }
 
     if (sc > con6) {
+      $("#con6 h2").addClass("con6_h2_slide");
       $("#con6 .wrap").addClass("animate-text");
     } else {
       $("#con6 .wrap").removeClass("animate-text");
@@ -105,7 +116,53 @@ $(function () {
 
     if (sc >= con7) {
       $("#con7 ul li:nth-child(1)").addClass("on");
-      $("#con7 ul li:nth-child(2)").addClass("on");
+      $("#con7 ul li:nth-child(3)").addClass("on");
     }
+  });
+
+  let list = gsap.utils.toArray("#con6 .list li");
+  let listA = gsap.utils.toArray("#con6 .list li.a");
+  let listB = gsap.utils.toArray("#con6 .list li.b");
+  let listC = gsap.utils.toArray("#con6 .list li.c");
+
+  gsap.to(list, {
+    xPercent: -100 * (list.length - 2),
+    scrollTrigger: {
+      trigger: "#con6",
+      pin: true,
+      scrub: 2,
+      start: "center center",
+      end: "130%",
+      markers: true,
+    },
+  });
+
+  gsap.to(listA, {
+    y: 50,
+    rotation: 10,
+    scrollTrigger: {
+      trigger: "#con6",
+      scrub: 2,
+      end: "200%",
+    },
+  });
+
+  gsap.to(listB, {
+    y: -50,
+    rotation: -10,
+    scrollTrigger: {
+      trigger: "#con6",
+      scrub: 2,
+      end: "200%",
+    },
+  });
+  gsap.to(listC, {
+    y: 30,
+    rotation: 10,
+    scrollTrigger: {
+      trigger: "#con6",
+      scrub: 2,
+      end: "200%",
+    },
   });
 });

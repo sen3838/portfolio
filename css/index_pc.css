@@ -1150,9 +1150,9 @@
     text-align: center;
   }
   #con7 h2.on {
-    -webkit-animation: tracking-in-expand 0.7s
+    -webkit-animation: tracking-in-expand 1.3s
       cubic-bezier(0.215, 0.61, 0.355, 1) both;
-    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+    animation: tracking-in-expand 1.3s cubic-bezier(0.215, 0.61, 0.355, 1) both;
   }
   @-webkit-keyframes tracking-in-expand {
     0% {
@@ -1245,6 +1245,9 @@
     font-size: 2rem;
     color: #134803;
     font-family: "SBAggroB";
+    -webkit-animation: tracking-in-expand 1.5s
+      cubic-bezier(0.215, 0.61, 0.355, 1) both;
+    animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
   }
   #con7 ul li:nth-child(2) img {
     width: 20rem;
@@ -2564,8 +2567,34 @@
     color: #134803;
     font-family: "SBAggroB";
     text-align: center;
+    -webkit-animation: tracking-in-expand 1.3s
+      cubic-bezier(0.215, 0.61, 0.355, 1) both;
+    animation: tracking-in-expand 1.3s cubic-bezier(0.215, 0.61, 0.355, 1) both;
   }
-
+  @-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
   .marquee {
     margin: -45px 0px 20px 0px;
     overflow: hidden;
@@ -2632,7 +2661,11 @@
     font-size: 2rem;
     color: #134803;
     font-family: "SBAggroB";
+    -webkit-animation: tracking-in-expand 1.3s
+      cubic-bezier(0.215, 0.61, 0.355, 1) both;
+    animation: tracking-in-expand 1.3s cubic-bezier(0.215, 0.61, 0.355, 1) both;
   }
+
   #con7 ul li:nth-child(2) img {
     width: 20rem;
     display: block;

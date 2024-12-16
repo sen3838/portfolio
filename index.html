@@ -2,6 +2,7 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="img/main_logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
@@ -17,19 +18,32 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/index_pc.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
-      <h1><a href="#"></a></h1>
+      <h1>
+        <a href="#"><img src="img/main_logo.png" alt="로고" /></a>
+      </h1>
       <ul>
         <li><a href="#">PROFILE</a></li>
         <li><a href="#">PLANNING</a></li>
         <li><a href="#">HOMEPAGE</a></li>
         <li><a href="#">ILLUSTRATOR</a></li>
       </ul>
-      <div><a href="#">CONTACT !</a></div>
+
+      <div>
+        <a href="#" class="contact-button">CONTACT !</a>
+        <button aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </header>
+
     <div id="visual">
       <ul class="bubble">
         <li class="bubble1">#에너지 넘치는</li>
@@ -179,81 +193,25 @@
           </li>
         </ul>
       </section>
-      <!-- 홈페이지 기획안 -->
-      <section id="con3">
-        <h2>PLANNING</h2>
-        <ul class="tit">
-          <li><h3>THEME PARK</h3></li>
-          <li>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam,
-            amet. Iure, corporis accusamus, odit, modi quaerat sequi vel dicta
-            consectetur aperiam dolor eum numquam fugit magnam quos illo.
-          </li>
-        </ul>
-        <ul class="con3_wrap">
-          <li class="value">
-            <h3>CORE VALUE</h3>
-            <ul>
-              <li class="circle">word1</li>
-              <li class="line"></li>
-              <li class="circle">word2</li>
-              <li class="line"></li>
-              <li class="circle">word3</li>
-            </ul>
-          </li>
-          <li class="color">
-            <h3>COLOR</h3>
-            <ul>
-              <li>#134803</li>
-              <li>#00000</li>
-              <li>#00000</li>
-              <li>#00000</li>
-            </ul>
-          </li>
-          <li class="icon">
-            <h3>ICON GRAPHIC</h3>
-            <ul>
-              <li><img src="img/icon1.jpg" /></li>
-              <li><img src="img/icon2.jpg" /></li>
-              <li><img src="img/icon3.jpg" /></li>
-              <li><img src="img/icon4.jpg" /></li>
-              <li><img src="img/icon1.jpg" /></li>
-              <li><img src="img/icon1.jpg" /></li>
-              <li><img src="img/icon2.jpg" /></li>
-              <li><img src="img/icon3.jpg" /></li>
-              <li><img src="img/icon4.jpg" /></li>
-              <li><img src="img/icon1.jpg" /></li>
-            </ul>
-          </li>
-          <li class="type">
-            <h3>TYPE FACE</h3>
-            <p class="ty_1">카페24 써라운드</p>
-            <p class="ty_2">나눔스퀘어라운드</p>
-          </li>
-        </ul>
-      </section>
-      <div class="text_flow">
-        <div class="text_flow_inner">
-          <span>Welcome to my portfolio. Explore my work and ideas.</span>
-          <span>Welcome to my portfolio. Explore my work and ideas.</span>
-          <span>Welcome to my portfolio. Explore my work and ideas.</span>
-          <span>Welcome to my portfolio. Explore my work and ideas.</span>
-        </div>
-      </div>
       <!-- 홈페이지 -->
       <section id="con4">
         <h2>HOMEPAGE</h2>
         <ul class="con4_wrap">
           <li class="txt_wrap">
-            <p class="txt">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam
-              sequi quas repellat quidem error fugit quibusdam culpa aperiam
-              consectetur consequuntur nostrum, officia sit similique! Accusamus
-              sapiente ut mollitia. Libero, quae.
-            </p>
+            <div class="txt">
+              <p>
+                <strong>사이트</strong> 기업형 홈페이지 (PC / 모바일 / 태블릿)
+              </p>
+              <p><strong>제작기간</strong> 약 2주 (기획 / 디자인 / 코딩)</p>
+              <p><strong>참여도</strong> 100%</p>
+            </div>
             <ul>
-              <li><a href="#">작업과정</a></li>
-              <li><a href="#">홈페이지 바로가기</a></li>
+              <li><a href="#" id="openModal">기획안</a></li>
+              <li>
+                <a href="https://sen3838.github.io/thebodyshop/"
+                  >홈페이지 바로가기</a
+                >
+              </li>
             </ul>
           </li>
           <li class="mock_wrap">
@@ -261,6 +219,112 @@
             <img src="img/tablet.png" />
             <img src="img/mobile.png" />
           </li>
+        </ul>
+        <!-- 모달 구조 -->
+        <div id="pdfModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="pdfIframe" width="100%" height="600px"></iframe>
+          </div>
+        </div>
+      </section>
+      <!-- 홈페이지 기획안 -->
+      <section id="con3">
+        <h2>Design Planning</h2>
+        <ul class="tit">
+          <li>
+            <img src="img/thebodyshop_main.gif" alt="더바디샵 메인화면" />
+          </li>
+          <li>
+            <div>
+              <h3><span class="highlight_1">AS IS</span></h3>
+              <p>
+                이전 홈페이지는 정보가 너무 많고 레이아웃이 빽빽해서 사용자가
+                원하는 정보를 찾기 어려웠습니다.<br />
+                불필요한 요소들이 많아 화면이 복잡하게 느껴졌고, 전반적으로
+                시각적인 정리가 부족했습니다.
+              </p>
+            </div>
+            <div>
+              <h3><span class="highlight_2">TO BE</span></h3>
+              <p>
+                기존 홈페이지에서 발견된 복잡한 정보 구조와 다소 오래된 시각적
+                요소들을 개선하여, <br />홈페이지를 단순하고 여백을 살린
+                디자인으로 리디자인하고, 깔끔하고 정돈된 레이아웃을 통해
+                <br />사용자 경험을 향상시키고, 직관적인 탐색이 가능하게
+                만들었습니다.
+              </p>
+            </div>
+          </li>
+        </ul>
+        <ul class="con3_wrap">
+          <li class="concept">
+            <h3>CONCEPT</h3>
+            <p>깔끔한 / 정렬된 레이아웃 / 자연친화적 / 감성적</p>
+          </li>
+          <li class="value">
+            <h3>CORE VALUE</h3>
+            <ul>
+              <li class="circle">Eco-friendly</li>
+              <li class="line"></li>
+              <li class="circle">Fluid</li>
+              <li class="line"></li>
+              <li class="circle">Simplicity</li>
+            </ul>
+          </li>
+          <li class="color">
+            <h3>COLOR</h3>
+            <ul>
+              <li>#004236</li>
+              <li>#a4e7ad</li>
+              <li>#fceea3</li>
+              <li>#eeeee</li>
+            </ul>
+          </li>
+
+          <li class="type">
+            <h3>TYPE FACE</h3>
+            <p class="ty_1">Abhaya Libre, serif</p>
+            <p class="ty_2">프리텐다드</p>
+          </li>
+        </ul>
+      </section>
+      <div class="marquee-container">
+        <p class="marquee-text">
+          Welcome to my portfolio. Here, you'll find a collection of my work,
+          showcasing creativity, precision, and a dedication to crafting
+          seamless web experiences. Each project reflects a journey of
+          innovation and problem-solving, designed to meet both user and
+          business needs. Thank you for exploring my work.
+          <span class="repeat-text"
+            >Welcome to my portfolio. Here, you'll find a collection of my work,
+            showcasing creativity, precision, and a dedication to crafting
+            seamless web experiences. Each project reflects a journey of
+            innovation and problem-solving, designed to meet both user and
+            business needs. Thank you for exploring my work. and our richer Body
+            Butters that lock in 96 hours of moisture.</span
+          >
+        </p>
+      </div>
+
+      <section id="con5"></section>
+      <section id="react_homepage">
+        <ul>
+          <li>
+            <h3>React 기반 쇼핑 플랫폼</h3>
+            <div class="txt">
+              <p>
+                <strong>사이트</strong> React 기반 반응형 웹사이트 (PC / 모바일
+                / 태블릿)
+              </p>
+              <p><strong>제작기간</strong> 약 2주 (기획 / 디자인 / 코딩)</p>
+              <p><strong>참여도</strong> 100%</p>
+            </div>
+            <div class="btn">
+              <a href="https://sen3838.github.io/">홈페이지 바로가기</a>
+            </div>
+          </li>
+          <li><img src="img/mockup_react.png" alt=" 리액트제작 홈페이지" /></li>
         </ul>
       </section>
       <!-- 일러스트 -->

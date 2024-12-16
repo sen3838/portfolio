@@ -13,12 +13,33 @@ $(function () {
     $(this).siblings(".contact_box").toggleClass("on");
   });
 
+  // 모달
+  $("#openModal").click(function (e) {
+    e.preventDefault(); // 링크 기본 동작 막기
+    $("#pdfModal").fadeIn(); // 모달 열기
+    $("#pdfIframe").attr("src", "document/planning.pdf"); // PDF 파일 경로 로드
+  });
+
+  // 모달 닫기 버튼 클릭 시
+  $(".close").click(function () {
+    $("#pdfModal").fadeOut(); // 모달 닫기
+    $("#pdfIframe").attr("src", ""); // PDF 소스 초기화
+  });
+
+  // 모달 밖을 클릭하면 모달 닫기
+  $(window).click(function (event) {
+    if ($(event.target).is("#pdfModal")) {
+      $("#pdfModal").fadeOut(); // 모달 닫기
+      $("#pdfIframe").attr("src", ""); // PDF 소스 초기화
+    }
+  });
   let visual = $("#visual").height();
   let visual0 = $("#visual").offset().top;
-  let profile = $("#con1").offset().top - 150;
+  let profile = $("#con1").offset().top - 350;
   let key = $("#con2").offset().top - 350;
-  let con3 = $("#con3").offset().top;
-  let con4 = $("#con4").offset().top;
+  let con3 = $("#con3").offset().top - 350;
+  let con4 = $("#con4").offset().top - 300;
+  let react = $("#react_homepage").offset().top - 300;
   let con6 = $("#con6").offset().top - 350;
   let con7 = $("#con7").offset().top + 650;
   // console.log(con4);
@@ -30,23 +51,14 @@ $(function () {
     if (sc <= visual0) {
       $("header").removeClass("on");
     }
-    if (sc >= visual && profile <= sc) {
-      $("#con1 h2").addClass("con1_h2_slide");
-
-      $("#con1 .id_pic li:nth-child(1) p").addClass("on");
-      $("  #con1 .id_pic li:nth-child(2) img").addClass("on");
-      document
-        .querySelector("#con1 .id_pic li:nth-child(2)")
-        .classList.add("on");
-      $("  #con1 .id_pic li:nth-child(2) p").addClass("on");
-
-      $("#con1 .id_pic li:nth-child(3) p").addClass("on");
+    if (sc >= profile) {
+      $("#con1").addClass("on");
       $("#con1 .id_txt li h3").addClass("on");
       $(
         "#con1 .id_txt li:nth-child(1) p, #con1 .id_txt li:nth-child(3) p"
       ).each(function (index) {
         $(this)
-          .delay(index * 300)
+          .delay(index * 200)
           .queue(function (next) {
             $(this).addClass("on");
             next();
@@ -77,11 +89,7 @@ $(function () {
     }
 
     if (sc > con3) {
-      $("#con3 h2").addClass("con3_h2_slide");
-      $("#con3 .tit li").addClass("on");
-      $("#con3 .con3_wrap h3").addClass("on");
-      $("#con3 .value .circle").addClass("on");
-      $("#con3 .value .line").addClass("on");
+      $("#con3").addClass("on");
       $("#con3 .color ul li").each(function (index) {
         $(this)
           .delay(index * 300)
@@ -90,7 +98,21 @@ $(function () {
             next();
           });
       });
-      $("#con3 .icon ul li").each(function (index) {
+
+      $("#con3 .type .ty_1").addClass("on");
+      $("#con3 .type .ty_2").addClass("on");
+    }
+
+    if (sc > con4) {
+      $("#con4").addClass("on");
+      $("#con4 h2").addClass("con4_h2_slide");
+      $("#con4 .txt_wrap").addClass("on");
+      $("#con4 .mock_wrap").addClass("on");
+    }
+
+    if (sc > react) {
+      $("#react_homepage").addClass("on");
+      $("#react_homepage .txt p").each(function (index) {
         $(this)
           .delay(index * 200)
           .queue(function (next) {
@@ -98,14 +120,6 @@ $(function () {
             next();
           });
       });
-      $("#con3 .type .ty_1").addClass("on");
-      $("#con3 .type .ty_2").addClass("on");
-    }
-
-    if (sc > con4) {
-      $("#con4 h2").addClass("con4_h2_slide");
-      $("#con4 .txt_wrap").addClass("on");
-      $("#con4 .mock_wrap").addClass("on");
     }
 
     if (sc > con6) {

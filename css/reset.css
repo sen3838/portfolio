@@ -7,28 +7,14 @@
   --green--dark: #85924d;
   --beige: #f6f5ef;
 }
-@font-face {
+/* @font-face {
   font-family: "SBAggroB";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff")
     format("woff");
   font-weight: normal;
   font-style: normal;
-}
-@font-face {
-  font-family: "NanumSquareRound";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+} */
 
-@font-face {
-  font-family: "GangwonEduPowerExtraBoldA";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 @font-face {
   font-family: "TheJamsil5Bold";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2")

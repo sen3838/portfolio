@@ -189,4 +189,35 @@ $(function () {
       end: "300%",
     },
   });
+  const $listItems = $(".list li");
+  const $modal = $(".illust_modal");
+  const $modalItems = $modal.find("ul li");
+  const $overlay = $(".modal-overlay");
+  const $closeButton = $(".modal-close");
+
+  $listItems.on("click", function () {
+    const index = $listItems.index(this);
+
+    // 모든 modalItems 비활성화
+    $modalItems.removeClass("active");
+
+    // 클릭한 순서에 맞는 modalItem 활성화
+    $modalItems.eq(index).addClass("active");
+
+    // 오버레이와 모달 표시
+    $overlay.show();
+    $modal.show();
+  });
+
+  // 오버레이 클릭 시 모달 닫기
+  $overlay.on("click", function () {
+    $modal.hide();
+    $overlay.hide();
+  });
+
+  // X 버튼 클릭 시 모달 닫기
+  $closeButton.on("click", function () {
+    $modal.hide();
+    $overlay.hide();
+  });
 });

@@ -884,6 +884,7 @@
     transform: translate(-50%, -50%); /* 정확한 중앙 정렬 */
     overflow: hidden; /* 콘텐츠가 넘칠 경우 숨기기 */
   }
+
   /* iframe 설정 (모달 크기에 맞추기) */
   #pdfIframe {
     width: 100%; /* 너비 100% */
@@ -1457,6 +1458,63 @@
     transform: rotate(-8deg);
   }
 
+  /* 일러스트 모달 */
+  /* 모달 팝업 설정 */
+  .illust_modal {
+    display: none; /* 기본적으로 숨김 */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white; /* 모달 자체는 흰색 배경 */
+    z-index: 1000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto; /* 내용이 많으면 스크롤 가능 */
+  }
+
+  /* 모달 내부 이미지 리스트 */
+  .illust_modal ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
+
+  .illust_modal ul li {
+    display: none; /* 기본적으로 숨김 */
+  }
+
+  .illust_modal ul li.active {
+    display: block; /* 활성화된 li만 보임 */
+  }
+
+  /* X 버튼 설정 */
+  .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+    z-index: 1100; /* X 버튼을 모달 위에 올림 */
+  }
+
+  /* 오버레이 설정: 모달 배경은 어두워지고, 모달은 밝게 보이게 */
+  .modal-overlay {
+    display: none; /* 기본적으로 숨김 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 배경 어두운 색 */
+    z-index: 999;
+  }
   /* con7 땡큐 */
   #con7 {
     padding: 300px 0px;
@@ -5058,7 +5116,7 @@
   }
 }
 /* ----------------모바일-------------- */
-@media (max-width: 480px){
+@media (max-width: 480px) {
   /* 모바일 header */
   header {
     width: 100%;

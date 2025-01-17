@@ -49,26 +49,32 @@ $(function () {
 
   let visual = $("#visual").height();
   let visual0 = $("#visual").offset().top;
-  let profile = $("#con1").offset().top - 350;
+  let profile = $("#profile").offset().top - 350;
   let key = $(".keyword").offset().top - 350;
-  let con3 = $("#con3").offset().top - 350;
-  let con4 = $("#con4").offset().top - 300;
+  let projects = $("#projects").offset().top - 350;
+  let planning = $("#planning").offset().top - 300;
   let react = $("#react_homepage").offset().top - 300;
-  let con6 = $("#con6").offset().top - 350;
-  let con7 = $("#con7").offset().top + 1500;
-  // console.log(con6);
+  let illust = $("#illust").offset().top;
+  let closing = $("#closing-section").offset().top + 1500;
+  // console.log(illust);
 
   $(window).on("scroll", function () {
     let sc = $(window).scrollTop();
     // console.log(sc);
+
+    // 헤더
     $("header").addClass("on");
+
+    // 비쥬얼
     if (sc <= visual0) {
       $("header").removeClass("on");
     }
+
+    // 프로필
     if (sc >= profile) {
-      $("#con1").addClass("on");
+      $("#profile").addClass("on");
       $(
-        "#con1 .id_txt li:nth-child(1) p, #con1 .id_txt li:nth-child(3) p"
+        "#profile .id_txt li:nth-child(1) p, #profile .id_txt li:nth-child(3) p"
       ).each(function (index) {
         $(this)
           .delay(index * 200)
@@ -77,7 +83,7 @@ $(function () {
             next();
           });
       });
-      $(" #con1 .id_txt img").each(function (index) {
+      $("#profile .id_txt img").each(function (index) {
         $(this)
           .delay(index * 300)
           .queue(function (next) {
@@ -86,7 +92,7 @@ $(function () {
           });
       });
     }
-
+    // 키워드
     if (sc >= profile && key < sc) {
       $(".keyword .left").addClass("leftbounce");
       $(".keyword .key_1 li, .keyword .key_2 li, .keyword .key_3 li").each(
@@ -101,13 +107,15 @@ $(function () {
       );
     }
 
-    if (sc > con3) {
-      $("#con3").addClass("on");
+    // 프로젝트 홈페이지
+    if (sc > projects) {
+      $("#projects").addClass("on");
     }
 
-    if (sc > con4) {
-      $("#con4").addClass("on");
-      $("#con4 .color ul li").each(function (index) {
+    // 홈페이지 기획서
+    if (sc > planning) {
+      $("#planning").addClass("on");
+      $("#planning .color ul li").each(function (index) {
         $(this)
           .delay(index * 300)
           .queue(function (next) {
@@ -117,6 +125,7 @@ $(function () {
       });
     }
 
+    // 리액트 홈페이지
     if (sc > react) {
       $("#react_homepage").addClass("on");
       $("#react_homepage .txt p").each(function (index) {
@@ -129,30 +138,32 @@ $(function () {
       });
     }
 
-    if (sc > con6) {
-      $("#con6").addClass("on");
-      $("#con6 h2").addClass("con6_h2_slide");
-      $("#con6 .wrap").addClass("animate-text");
+    // 일러스트
+    if (sc > illust) {
+      $("#illust").addClass("on");
+      // $("#illust h2").addClass("con6_h2_slide");
+      $("#illust .wrap").addClass("animate-text");
     } else {
-      $("#con6 .wrap").removeClass("animate-text");
+      $("#illust .wrap").removeClass("animate-text");
     }
 
-    if (sc >= con7) {
-      $("#con7").addClass("on");
+    // 클로징 섹션
+    if (sc >= closing) {
+      $("#closing-section").addClass("on");
     }
   });
 
   gsap.registerPlugin(ScrollTrigger);
 
-  let list = gsap.utils.toArray("#con6 .list li");
-  let listA = gsap.utils.toArray("#con6 .list li.a");
-  let listB = gsap.utils.toArray("#con6 .list li.b");
-  let listC = gsap.utils.toArray("#con6 .list li.c");
+  let list = gsap.utils.toArray("#illust .list li");
+  let listA = gsap.utils.toArray("#illust .list li.a");
+  let listB = gsap.utils.toArray("#illust .list li.b");
+  let listC = gsap.utils.toArray("#illust .list li.c");
 
   gsap.to(list, {
     xPercent: -100 * (list.length - 2),
     scrollTrigger: {
-      trigger: "#con6",
+      trigger: "#illust",
       pin: true,
       scrub: 2,
       start: "center center",
@@ -165,7 +176,7 @@ $(function () {
     y: 50,
     rotation: 10,
     scrollTrigger: {
-      trigger: "#con6",
+      trigger: "#illust",
       scrub: 2,
       end: "300%",
     },
@@ -175,7 +186,7 @@ $(function () {
     y: -50,
     rotation: -10,
     scrollTrigger: {
-      trigger: "#con6",
+      trigger: "#illust",
       scrub: 2,
       end: "300%",
     },
@@ -184,11 +195,13 @@ $(function () {
     y: 30,
     rotation: 10,
     scrollTrigger: {
-      trigger: "#con6",
+      trigger: "#illust",
       scrub: 2,
       end: "300%",
     },
   });
+
+  // 일러스트 모달
   const $listItems = $(".list li");
   const $modal = $(".illust_modal");
   const $modalItems = $modal.find("ul li");

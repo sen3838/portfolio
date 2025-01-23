@@ -53,8 +53,9 @@ $(function () {
   let key = $(".keyword").offset().top - 350;
   let projects = $("#projects").offset().top - 350;
   let planning = $("#planning").offset().top - 300;
+  let js = $("#script").offset().top - 250;
   let react = $("#react_homepage").offset().top - 300;
-  let illust = $("#illust").offset().top;
+  let illust = $("#illust").offset().top - 180;
   let closing = $("#closing-section").offset().top + 1500;
   // console.log(illust);
 
@@ -131,6 +132,35 @@ $(function () {
       $("#react_homepage .txt p").each(function (index) {
         $(this)
           .delay(index * 200)
+          .queue(function (next) {
+            $(this).addClass("on");
+            next();
+          });
+      });
+    }
+
+    // 자바스크립트 작업물
+    if (sc > js) {
+      $("#script").addClass("on");
+      $("#script .numberGame .txt p").each(function (index) {
+        $(this)
+          .delay(index * 400)
+          .queue(function (next) {
+            $(this).addClass("on");
+            next();
+          });
+      });
+      $("#script .todolist .txt p").each(function (index) {
+        $(this)
+          .delay(index * 400)
+          .queue(function (next) {
+            $(this).addClass("on");
+            next();
+          });
+      });
+      $("#script .weather .txt p").each(function (index) {
+        $(this)
+          .delay(index * 400)
           .queue(function (next) {
             $(this).addClass("on");
             next();
@@ -220,17 +250,23 @@ $(function () {
     // 오버레이와 모달 표시
     $overlay.show();
     $modal.show();
+    // 스크롤 비활성화
+    $("body").css("overflow", "hidden");
   });
 
   // 오버레이 클릭 시 모달 닫기
   $overlay.on("click", function () {
     $modal.hide();
     $overlay.hide();
+    // 스크롤 활성화
+    $("body").css("overflow", "");
   });
 
   // X 버튼 클릭 시 모달 닫기
   $closeButton.on("click", function () {
     $modal.hide();
     $overlay.hide();
+    // 스크롤 활성화
+    $("body").css("overflow", "");
   });
 });

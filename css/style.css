@@ -1308,11 +1308,41 @@
     width: 100%;
   }
 
+  #script h2 {
+    width: 200px;
+    margin: 50px 0px;
+    font-size: 3rem;
+    margin: 150px auto;
+    font-family: "TheJamsil5Bold";
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s;
+  }
+
+  #script h2::before {
+    content: "";
+    width: 250px;
+    height: 40px;
+    display: inline-block;
+    margin-left: 20px;
+    position: absolute;
+    left: -30%;
+    top: -10px;
+    transform: translateX(-30%);
+    border: 1px solid #b7c96b;
+    z-index: -1;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s;
+  }
+
   #script ul {
     width: 90%;
-    margin: 0 auto;
+    margin: 150px auto;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 20px;
   }
 
@@ -1322,9 +1352,29 @@
 
   #script ul li:nth-child(1) img {
     width: 90%;
+    display: block;
+    margin: 0 auto;
     border-radius: 20px;
   }
 
+  #script ul li:nth-child(1) div {
+    font-family: "Freesentation-5Medium";
+    border: 1px solid var(--green--dark);
+    width: 100px;
+    text-align: center;
+    margin: 20px auto 0;
+    padding: 5px 0;
+    border-radius: 15px;
+  }
+  #script ul li:nth-child(1) div a {
+    display: block;
+  }
+
+  #script ul li:nth-child(1) div:hover {
+    background-color: var(--green--dark);
+    color: #fff;
+    transition: 0.5s;
+  }
   #script ul li:nth-child(2) {
     line-height: 30px;
     padding: 0px 80px;
@@ -1334,12 +1384,73 @@
   #script h3 {
     font-family: "TheJamsil5Bold";
     font-size: 25px;
-    line-height: 100px;
+    line-height: 70px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.8s;
+    background-color: #f5f5f5;
+  }
+
+  #script h3 img {
+    width: 50px;
+  }
+  #script .txt p {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: 0.5s;
   }
 
   #script strong {
     font-family: "Freesentation-8ExtraBold";
   }
+
+  #script .todolist {
+    display: flex;
+    margin-top: 150px;
+  }
+  #script .todolist li:nth-child(1) {
+    order: 2;
+  }
+
+  /* 자바스크립트 작업물 addClass */
+
+  #script.on h2 {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  #script.on h2::before {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  #script.on h3 {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  #script .numberGame .txt p.on {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  #script .todolist .txt p.on {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  #script .weather .txt p.on {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
   /* 일러스트 작업물*/
   #illust {
     width: 100%;
@@ -3096,6 +3207,140 @@
     transform: translateY(0);
   }
 
+  /* 자바스크립트 작업물 */
+  #script {
+    width: 100%;
+    text-align: center;
+  }
+
+  #script h2 {
+    width: 200px;
+    margin: 50px 0px;
+    font-size: 40px;
+    margin: 150px auto;
+    font-family: "TheJamsil5Bold";
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s;
+  }
+
+  #script h2::before {
+    content: "";
+    width: 250px;
+    height: 40px;
+    display: inline-block;
+    margin-left: 20px;
+    position: absolute;
+    left: -30%;
+    top: -10px;
+    transform: translateX(-30%);
+    border: 1px solid #b7c96b;
+    z-index: -1;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s;
+  }
+
+  #script ul {
+    width: 90%;
+    margin: 100px auto;
+  }
+
+  #script ul li:nth-child(1) img {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+
+  #script ul li:nth-child(1) div {
+    font-family: "Freesentation-5Medium";
+    border: 1px solid var(--green--dark);
+    width: 100px;
+    text-align: center;
+    margin: 20px auto 0;
+    padding: 5px 0;
+    border-radius: 15px;
+  }
+  #script ul li:nth-child(1) div a {
+    display: block;
+  }
+
+  #script ul li:nth-child(1) div:hover {
+    background-color: var(--green--dark);
+    color: #fff;
+    transition: 0.5s;
+  }
+  #script ul li:nth-child(2) {
+    line-height: 30px;
+    padding: 0px 80px;
+    box-sizing: border-box;
+  }
+
+  #script h3 {
+    font-family: "TheJamsil5Bold";
+    font-size: 20px;
+    line-height: 60px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 50px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.8s;
+    background-color: #f5f5f5;
+  }
+
+  #script h3 img {
+    width: 30px;
+    height: 30px;
+  }
+  #script .txt p {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: 0.5s;
+  }
+
+  #script strong {
+    font-family: "Freesentation-8ExtraBold";
+  }
+
+  /* 자바스크립트 작업물 addClass */
+
+  #script.on h2 {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  #script.on h2::before {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  #script.on h3 {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  #script .numberGame .txt p.on {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  #script .todolist .txt p.on {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  #script .weather .txt p.on {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
   /* illust 일러스트 작업물*/
   #illust {
     width: 100%;
@@ -3193,7 +3438,7 @@
   }
 
   #illust .list li {
-    width: 300px;
+    width: 350px;
     height: 400px;
     padding: 0px 30px;
     box-sizing: border-box;
@@ -3248,6 +3493,78 @@
   }
   #illust .list li.c {
     transform: rotate(-8deg);
+  }
+
+  /* 일러스트 모달 팝업*/
+  .illust_modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 1000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 90vw;
+    max-height: 80vh;
+    overflow: hidden;
+  }
+  .illust_modal ul li img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  /* 모달 내부 이미지 리스트 */
+  .illust_modal ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
+
+  .illust_modal ul li {
+    display: none;
+  }
+
+  .illust_modal ul li.active {
+    display: block;
+  }
+
+  /* close 버튼 */
+  .modal-close {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #555;
+    opacity: 0.8;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .modal-close i {
+    color: #fff;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
   }
 
   /* 클로징 섹션 */
@@ -4795,6 +5112,142 @@
     transform: translateY(0);
   }
 
+  /* 자바스크립트 작업물 */
+  #script {
+    width: 100%;
+    text-align: center;
+  }
+
+  #script h2 {
+    width: 200px;
+    margin: 50px 0px;
+    font-size: 30px;
+    margin: 150px auto 0px;
+    font-family: "TheJamsil5Bold";
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s;
+  }
+
+  #script h2::before {
+    content: "";
+    width: 150px;
+    height: 30px;
+    display: inline-block;
+    margin-left: 20px;
+    position: absolute;
+    left: -30%;
+    top: -10px;
+    transform: translateX(-30%);
+    border: 1px solid #b7c96b;
+    z-index: -1;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s;
+  }
+
+  #script ul {
+    width: 90%;
+    margin: 100px auto;
+  }
+
+  #script ul li:nth-child(1) img {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+
+  #script ul li:nth-child(1) div {
+    font-family: "Freesentation-5Medium";
+    border: 1px solid var(--green--dark);
+    width: 100px;
+    text-align: center;
+    margin: 20px auto 0;
+    padding: 5px 0;
+    border-radius: 15px;
+  }
+  #script ul li:nth-child(1) div a {
+    display: block;
+  }
+
+  #script ul li:nth-child(1) div:hover {
+    background-color: var(--green--dark);
+    color: #fff;
+    transition: 0.5s;
+  }
+
+  #script ul li:nth-child(2) {
+    font-size: 15px;
+    line-height: 30px;
+    padding: 0px 80px;
+    box-sizing: border-box;
+  }
+
+  #script h3 {
+    font-family: "TheJamsil5Bold";
+    font-size: 17px;
+    line-height: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 50px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.8s;
+    background-color: #f5f5f5;
+  }
+
+  #script h3 img {
+    width: 30px;
+    height: 30px;
+  }
+  #script .txt p {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: 0.5s;
+  }
+
+  #script strong {
+    font-family: "Freesentation-8ExtraBold";
+  }
+
+  /* 자바스크립트 작업물 addClass */
+
+  #script.on h2 {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  #script.on h2::before {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  #script.on h3 {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  #script .numberGame .txt p.on {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  #script .todolist .txt p.on {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  #script .weather .txt p.on {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
   /* 모바일 illust 일러스트 작업물*/
   #illust {
     width: 100%;
@@ -4899,6 +5352,7 @@
   #illust .list img {
     width: 100%;
     height: 100%;
+    border-radius: 15px;
     object-fit: cover;
   }
 
@@ -4906,7 +5360,7 @@
     width: 100%;
     height: 100%;
     content: "";
-    background-image: url(https://png.pngtree.com/element_our/20190601/ourmid/pngtree-smile-expression-image_1330761.jpg);
+    background-image: url(../img/click.png);
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
@@ -4935,7 +5389,77 @@
   #illust .list li.c {
     transform: rotate(-8deg);
   }
+  /* 일러스트 모달 팝업*/
+  .illust_modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 1000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 90vw;
+    max-height: 80vh;
+    overflow: hidden;
+  }
+  .illust_modal ul li img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  /* 모달 내부 이미지 리스트 */
+  .illust_modal ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
 
+  .illust_modal ul li {
+    display: none;
+  }
+
+  .illust_modal ul li.active {
+    display: block;
+  }
+
+  /* close 버튼 */
+  .modal-close {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #555;
+    opacity: 0.8;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .modal-close i {
+    color: #fff;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
   /* 클로징 섹션 */
   #closing-section {
     padding-bottom: 200px;
@@ -6482,6 +7006,142 @@
     transform: translateY(0);
   }
 
+  /* 자바스크립트 작업물 */
+  #script {
+    width: 100%;
+    text-align: center;
+  }
+
+  #script h2 {
+    width: 200px;
+    margin: 50px 0px;
+    font-size: 30px;
+    margin: 150px auto 0px;
+    font-family: "TheJamsil5Bold";
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s;
+  }
+
+  #script h2::before {
+    content: "";
+    width: 150px;
+    height: 30px;
+    display: inline-block;
+    margin-left: 20px;
+    position: absolute;
+    left: -30%;
+    top: -10px;
+    transform: translateX(-30%);
+    border: 1px solid #b7c96b;
+    z-index: -1;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s;
+  }
+
+  #script ul {
+    width: 90%;
+    margin: 100px auto;
+  }
+
+  #script ul li:nth-child(1) img {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+
+  #script ul li:nth-child(1) div {
+    font-family: "Freesentation-5Medium";
+    border: 1px solid var(--green--dark);
+    width: 100px;
+    text-align: center;
+    margin: 20px auto 0;
+    padding: 5px 0;
+    border-radius: 15px;
+  }
+  #script ul li:nth-child(1) div a {
+    display: block;
+  }
+
+  #script ul li:nth-child(1) div:hover {
+    background-color: var(--green--dark);
+    color: #fff;
+    transition: 0.5s;
+  }
+
+  #script ul li:nth-child(2) {
+    font-size: 15px;
+    line-height: 30px;
+    padding: 0px 80px;
+    box-sizing: border-box;
+  }
+
+  #script h3 {
+    font-family: "TheJamsil5Bold";
+    font-size: 17px;
+    line-height: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 50px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.8s;
+    background-color: #f5f5f5;
+  }
+
+  #script h3 img {
+    width: 30px;
+    height: 30px;
+  }
+  #script .txt p {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: 0.5s;
+  }
+
+  #script strong {
+    font-family: "Freesentation-8ExtraBold";
+  }
+
+  /* 자바스크립트 작업물 addClass */
+
+  #script.on h2 {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  #script.on h2::before {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  #script.on h3 {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  #script .numberGame .txt p.on {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  #script .todolist .txt p.on {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  #script .weather .txt p.on {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
   /* 모바일 illust 일러스트 작업물*/
   #illust {
     width: 100%;
@@ -6593,7 +7253,7 @@
     width: 100%;
     height: 100%;
     content: "";
-    background-image: url(https://png.pngtree.com/element_our/20190601/ourmid/pngtree-smile-expression-image_1330761.jpg);
+    background-image: url(../img/click.png);
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
@@ -6604,7 +7264,6 @@
     opacity: 0;
     transition: 0.5s;
   }
-
   #illust .box:hover::after {
     opacity: 0.5;
   }
@@ -6622,7 +7281,77 @@
   #illust .list li.c {
     transform: rotate(-8deg);
   }
+  /* 일러스트 모달 팝업*/
+  .illust_modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 1000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 90vw;
+    max-height: 80vh;
+    overflow: hidden;
+  }
+  .illust_modal ul li img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  /* 모달 내부 이미지 리스트 */
+  .illust_modal ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
 
+  .illust_modal ul li {
+    display: none;
+  }
+
+  .illust_modal ul li.active {
+    display: block;
+  }
+
+  /* close 버튼 */
+  .modal-close {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #555;
+    opacity: 0.8;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .modal-close i {
+    color: #fff;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
   /* 클로징 섹션 */
   #closing-section {
     padding-bottom: 200px;

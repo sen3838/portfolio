@@ -1,21 +1,12 @@
 $(function () {
   $("header ul li").on("click", function () {
     let i = $(this).index();
-
     let target = $("#container section").eq(i).offset().top;
     console.log(target);
     $("html, body").stop().animate({ scrollTop: target }, 800);
   });
 
-  // 비쥬얼
-  setInterval(function () {
-    $(".title")
-      .stop()
-      .animate({ "margin-top": "-50px" }, function () {
-        $(".title h2:first-child").appendTo(".title");
-        $(".title").stop().css({ "margin-top": "0px" });
-      });
-  }, 2000);
+  // 콘택트 버튼
   $(".contact-toggle").on("click", function () {
     $(this).toggleClass("on");
     $(this).siblings(".contact_box").toggleClass("on");
@@ -26,7 +17,7 @@ $(function () {
     $(".contact_box").toggleClass("on"); // 'show' 클래스 추가
   });
 
-  // *****모달
+  // 기획안 모달
   $("#openModal").click(function (e) {
     e.preventDefault(); // 링크 기본 동작 막기
     $("#pdfModal").fadeIn(); // 모달 열기

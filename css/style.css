@@ -1174,15 +1174,15 @@
 
   .marquee__inner span {
     display: inline-block;
-    margin-right: 20px; 
+    margin-right: 20px;
   }
 
   @keyframes marquee {
     0% {
-      transform: translateX(100%); 
+      transform: translateX(100%);
     }
     100% {
-      transform: translateX(-100%); 
+      transform: translateX(-100%);
     }
   }
 
@@ -1460,7 +1460,7 @@
     position: absolute;
     border-radius: 50%;
     opacity: 0.5;
-    top: 50%; 
+    top: 50%;
     z-index: -1;
   }
 
@@ -1469,7 +1469,7 @@
     height: 300px;
     background-color: #d6e986;
     transform: translateY(-100%);
-    left: -100px; 
+    left: -100px;
   }
 
   #illust::after {
@@ -1477,7 +1477,7 @@
     height: 500px;
     background-color: #b7c96b;
     transform: translateY(-20%);
-    right: -250px; 
+    right: -250px;
   }
   #illust h2 {
     width: 250px;
@@ -1964,7 +1964,7 @@
     background-color: #f6f5ef;
     position: relative;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     overflow: hidden;
   }
@@ -2082,7 +2082,7 @@
     transform: rotate(-10deg);
     left: 28%;
     top: 80px;
-    animation: bubblePop 2s ease-in-out infinite; 
+    animation: bubblePop 2s ease-in-out infinite;
     animation-delay: 0.2s;
   }
 
@@ -2209,19 +2209,19 @@
 
   @keyframes movePupils {
     0% {
-      transform: translate(-50%, -50%) translateX(-30px); 
+      transform: translate(-50%, -50%) translateX(-30px);
     }
     25% {
-      transform: translate(-50%, -50%) translateX(30px); 
+      transform: translate(-50%, -50%) translateX(30px);
     }
     50% {
-      transform: translate(-50%, -50%) translateX(-30px); 
+      transform: translate(-50%, -50%) translateX(-30px);
     }
     75% {
       transform: translate(-50%, -50%) translateX(30px);
     }
     100% {
-      transform: translate(-50%, -50%) translateX(0); 
+      transform: translate(-50%, -50%) translateX(0);
     }
   }
 
@@ -2758,35 +2758,35 @@
   #projects .modal {
     display: none;
     position: fixed;
-    z-index: 1; 
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     z-index: 99;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   /* 모달 내용  */
   #projects .modal-content {
     background-color: #fff;
-    padding: 40px; 
-    width: 80%; 
+    padding: 40px;
+    width: 80%;
     max-width: 1500px;
-    height: 90%; 
-    max-height: 1000px; 
+    height: 90%;
+    max-height: 1000px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     overflow: hidden;
   }
 
   /* iframe  */
   #projects #pdfIframe {
-    width: 100%; 
-    height: 100%; 
-    border: none; 
+    width: 100%;
+    height: 100%;
+    border: none;
   }
 
   /* 모달 닫기 버튼 */
@@ -3354,7 +3354,7 @@
     position: absolute;
     border-radius: 50%;
     opacity: 0.5;
-    top: 50%; 
+    top: 50%;
     z-index: -1;
   }
 
@@ -3371,7 +3371,7 @@
     height: 500px;
     background-color: #b7c96b;
     transform: translateY(-20%);
-    right: -250px; 
+    right: -250px;
   }
   #illust h2 {
     width: 250px;
@@ -3791,7 +3791,6 @@
 }
 
 @media (min-width: 481px) and (max-width: 699px) {
-
   /* 모바일 header */
   header {
     width: 100%;
@@ -3870,7 +3869,7 @@
     background-color: #f6f5ef;
     position: relative;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     overflow: hidden;
   }
@@ -3991,7 +3990,7 @@
     transform: rotate(-10deg);
     left: 28%;
     top: 80px;
-    animation: bubblePop 2s ease-in-out infinite; 
+    animation: bubblePop 2s ease-in-out infinite;
     animation-delay: 0.2s;
   }
 
@@ -4118,19 +4117,19 @@
 
   @keyframes movePupils {
     0% {
-      transform: translate(-50%, -50%) translateX(-30px); 
+      transform: translate(-50%, -50%) translateX(-30px);
     }
     25% {
-      transform: translate(-50%, -50%) translateX(30px); 
+      transform: translate(-50%, -50%) translateX(30px);
     }
     50% {
       transform: translate(-50%, -50%) translateX(-30px);
     }
     75% {
-      transform: translate(-50%, -50%) translateX(30px); 
+      transform: translate(-50%, -50%) translateX(30px);
     }
     100% {
-      transform: translate(-50%, -50%) translateX(0); 
+      transform: translate(-50%, -50%) translateX(0);
     }
   }
 
@@ -4603,14 +4602,14 @@
   /* 모달 */
   .modal {
     display: none;
-    position: fixed; 
-    z-index: 1; 
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     z-index: 99;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   /* 모달 내용 */

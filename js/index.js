@@ -14,7 +14,7 @@ $(function () {
 
   $(".contact-button").click(function () {
     $(".contact-toggle").toggleClass("on");
-    $(".contact_box").toggleClass("on"); // 'show' 클래스 추가
+    $(".contact_box").toggleClass("on");
   });
 
   // 기획안 모달
@@ -27,19 +27,18 @@ $(function () {
   // 모달 닫기 버튼 클릭 시
   $(".close").click(function () {
     $("#pdfModal").fadeOut(); // 모달 닫기
-    $("#pdfIframe").attr("src", ""); // PDF 소스 초기화
+    $("#pdfIframe").attr("src", ""); // PDF 해제
   });
 
   // 모달 밖을 클릭하면 모달 닫기
   $(window).click(function (event) {
     if ($(event.target).is("#pdfModal")) {
       $("#pdfModal").fadeOut(); // 모달 닫기
-      $("#pdfIframe").attr("src", ""); // PDF 소스 초기화
+      $("#pdfIframe").attr("src", ""); // PDF 해제
     }
   });
 
-  let visual = $("#visual").height();
-  let visual0 = $("#visual").offset().top;
+  let visual = $("#visual").offset().top;
   let profile = $("#profile").offset().top - 350;
   let key = $(".keyword").offset().top - 350;
   let projects = $("#projects").offset().top - 350;
@@ -58,7 +57,7 @@ $(function () {
     $("header").addClass("on");
 
     // 비쥬얼
-    if (sc <= visual0) {
+    if (sc <= visual) {
       $("header").removeClass("on");
     }
 

@@ -175,7 +175,7 @@
     background-color: var(--green--basic);
     position: absolute;
     transform-origin: center center;
-    transition: transform 0.3s ease, margin 0.3s ease;
+    transition: transform 0.3s ease;
     display: block;
     font-family: "Freesentation-9Black";
   }
@@ -310,8 +310,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 20;
-    animation: movePupils 5s infinite ease-in-out,
-      smileEyes 5s infinite ease-in-out;
+    animation: movePupils 5s infinite ease-in-out;
   }
 
   @keyframes movePupils {
